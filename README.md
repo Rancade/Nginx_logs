@@ -25,8 +25,7 @@ sudo apt install fail2ban -y
 ```
 2. 放置分析脚本
 ```bash
-sudo curl -o /usr/local/bin/nginx_guardian.sh \
-https://raw.githubusercontent.com/yourname/cute-nginx-guard/main/nginx_guardian.sh
+sudo curl -o https://github.com/Rancade/Nginx_logs.git
 sudo chmod +x /usr/local/bin/awk_nginxlog.sh
 ```
 3. 添加定时任务
@@ -80,15 +79,13 @@ awk '{printf "\033[35m%-15s\033[0m \033[36m%s次\033[0m", $1,$2; print($2>100?"�
 ---
 
 🎀 文件结构说明
-
+```bash
 .
 ├── nginx_guardian.sh     # 主脚本
-
 ├── banned_ips.log        # 被封禁的坏孩子
-
 ├── top_ips.log           # TOP10访问IP
-
 └── /etc/fail2ban/        # 防护规则配置
+```
 
 ---
 
@@ -100,4 +97,4 @@ awk '{printf "\033[35m%-15s\033[0m \033[36m%s次\033[0m", $1,$2; print($2>100?"�
     v1.0
     🍰 初始版本发布
 
-GitHub Stars
+[![GitHub Stars](https://img.shields.io/github/stars/yourname/server-guardian?style=social)](https://github.com/Rancade/Nginx_logs.git)
