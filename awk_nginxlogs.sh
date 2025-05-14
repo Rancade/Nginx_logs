@@ -8,7 +8,7 @@
 # 分析Nginx访问日志并统计前10个访问次数最多的IP，并定时自动封禁高频 IP。
 
 log_file="/var/log/nginx/access.log"
-output_file="top_ips.txt"
+output_file="top_ips.log"
 threshold=100  # 封禁阈值
 
 # 分析日志并输出前 10 IP
